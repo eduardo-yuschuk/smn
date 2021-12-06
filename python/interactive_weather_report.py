@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-days = 1
-#days = int(input("Buscamos el pronóstico a 1, 2 o 3 días?:"))
+#days = 1
+days = int(input("Buscamos el pronóstico a 1, 2 o 3 días?:"))
 print("Buscando el pronóstico a %d día/s..." % days)
 url = format("https://ws.smn.gob.ar/map_items/forecast/%d" % days)
 
