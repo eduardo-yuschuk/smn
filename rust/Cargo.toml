@@ -1,0 +1,12 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["eduardo.yuschuk <eduardo.yuschuk@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1.0.110"
+serde_derive = "1.0.110"
+reqwest = { version = "0.10.4", features = ["blocking", "json"] }
