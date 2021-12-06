@@ -153,64 +153,6 @@ fn main() {
     println!("{}", city_report.weather);
 }
 
-pub fn procedural_app() {
-    // captura de pedido del usuario
-    println!("Buscamos el pronóstico a 1, 2 o 3 días?:");
-    let days = read_int_from_stdin();
-    // lectura de datos
-    println!("Buscando el pronóstico a {} días...", days);
-    let url = format!("https://ws.smn.gob.ar/map_items/forecast/{}", days);
-    let response = reqwest::blocking::get(&url)
-        .expect(&format!("Error al acceder al servicio en la URL {}!", url));
-    let reports = response
-        .json::<Vec<Report>>()
-        .expect("Error al interpretar la respueta del servicio!");
-    // presentación de los datos, provincias
-    let mut provinces: Vec<String> = reports
-        .as_slice()
-        .into_iter()
-        .map(|report| report.province.clone())
-        .collect();
-    provinces.sort();
-    provinces.dedup();
-    println!("Seleccione una provincia (ingrese el número):");
-    for (id, province) in provinces.iter().enumerate() {
-        println!("[{}] {}", id, province);
-    }
-    let province_id = read_int_from_stdin();
-    let province = provinces
-        .get(province_id as usize)
-        .expect("Provincia no encontrada!");
-    println!("Provincia seleccionada: {}...", province);
-    // ciudades
-    println!("Seleccione una ciudad:");
-    let mut cities = vec![];
-    for report in reports
-        //.as_slice()
-        .iter()
-    {
-        if report.province.eq_ignore_ascii_case(province) {
-            cities.push(report.name.clone());
-        }
-    }
-    cities.sort();
-    for (id, city) in cities.iter().enumerate() {
-        println!("[{}] {}", id, city);
-    }
-    // pronóstico para la ciudad seleccionada
-    let city_id = read_int_from_stdin();
-    let city = cities.get(city_id as usize).expect("Ciudad no encontrada!");
-    println!("Ciudad seleccionada: {}...", city);
-    //let city_report: Vec<Report> =
-    for city_report in reports
-        //.as_slice()
-        .into_iter()
-        .filter(|report| report.name.eq_ignore_ascii_case(city))
-    {
-        println!("{}", city_report.weather);
-    }
-}
-
 fn read_int_from_stdin() -> i32 {
     let mut buffer = String::new();
     io::stdin()
