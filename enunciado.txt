@@ -1,0 +1,108 @@
+Implementar en Rust in programa de consola que consuma la URL:
+
+https://ws.smn.gob.ar/map_items/forecast/1
+
+(donde el parametro puede ser 1, 2 o 3 dias)
+
+y muestre la temperatura y pronostico para la ma~nana y la tarde de la provincia y ciudad solicitada por el ususario.
+
+
+Interacci'on de ejemplo:
+
+
+
+Buscamos el pronóstico a 1, 2 o 3 días?:1
+Buscando el pronóstico a 1 día/s...
+Seleccione una provincia (ingrese el número):
+[0] Buenos Aires
+[1] Capital Federal
+[2] Catamarca
+[3] Chaco
+[4] Chubut
+[5] Corrientes
+[6] Córdoba
+[7] Entre Ríos
+[8] Formosa
+[9] Jujuy
+[10] La Pampa
+[11] La Rioja
+[12] Mendoza
+[13] Misiones
+[14] Neuquén
+[15] Río Negro
+[16] Salta
+[17] San Juan
+[18] San Luis
+[19] Santa Cruz
+[20] Santa Fe
+[21] Santiago del Estero
+[22] Tierra del Fuego, Antártida e Islas del Atlántico Sur
+[23] Tucumán
+>0
+Provincia seleccionada: Buenos Aires...
+Seleccione una ciudad (ingrese el número):
+[0] 9 de Julio
+[1] Avellaneda
+[2] Azul
+[3] Bahía Blanca
+[4] Balcarce
+[5] Banfield
+[6] Benito Juárez
+[7] Campo de Mayo
+[8] Carmen de Patagones
+[9] Chacabuco
+[10] Chascomus
+[11] Ciudad Evita
+[12] Ciudad Jardin Lomas del Palomar
+[13] Coronel Pringles
+[14] Coronel Suarez
+[15] Dolores
+[16] Don Torcuato
+[17] El Palomar
+[18] General Villegas
+[19] José María Ezeiza
+[20] Junín
+[21] La Plata
+[22] Las Flores
+[23] Lomas de Zamora
+[24] Maipú
+[25] Mar del Plata
+[26] Mariano Moreno
+[27] Merlo
+[28] Miramar
+[29] Monte Hermoso
+[30] Morón
+[31] Necochea
+[32] Olavarría
+[33] Pehuajó
+[34] Pergamino
+[35] Pigüé
+[36] Pinamar
+[37] Punta Indio
+[38] Quilmes
+[39] San Andrés
+[40] San Antonio de Areco
+[41] San Bernardo
+[42] San Carlos de Bolívar
+[43] San Clemente del Tuyú
+[44] San Fernando
+[45] San Isidro
+[46] San Miguel
+[47] San Pedro
+[48] Santa Teresita
+[49] Tandil
+[50] Tigre
+[51] Trenque Lauquen
+[52] Tres Arroyos
+[53] Villa Gesell
+[54] Zárate
+>30
+Ciudad seleccionada: Morón...
+Ma~ana:
+Temperatura: 15
+Pronostico: Cielo parcialmente nublado a nublado. Probabilidad neblinas especialmente en la zona suburbana. Tiempo desmejorando, con probabilidad de lluvias y algunas tormentas. Vientos moderados del sector este.
+Tarde:
+Temperatura: 18
+Pronostico: Cielo nublado. Probabilidad de lluvias y tormentas. Vientos leves del sector este.
+
+
